@@ -6,10 +6,37 @@ editor_options:
 ---
 
 ```{r}
+
 # load packages
 library(tidyverse)
 library(palmerpenguins)
 
 
 ```
+
+```{r}
+#create expression
+fx <- expression(x^2)
+
+#take deriv
+df_dx <- D(expr = fx, name = "x")
+df_dx
+
+x <- 3
+eval(df_dx)
+```
+
+```{r}
+pa <- expression(2 * (3 * a + 2)^4 - 5)
+
+dp_da <- D(expr = pa, name = "a")
+dp_da
+
+a <- 1.2
+eval(dp_da)
+```
+
+
+
+
 
