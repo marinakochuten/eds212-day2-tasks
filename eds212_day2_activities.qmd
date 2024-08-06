@@ -38,7 +38,7 @@ eval(dp_da)
 
 ```{r}
 ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
-  geom_point(data = penguins) + ggtitle("Penguin bill length versus bill depth across species") +labs(x = "Bill length (mm)", y = "Bill depth (mm)")
+  geom_point(data = penguins) + ggtitle("Penguin bill length versus bill depth across species") +labs(x = "Bill Length (mm)", y = "Bill Depth (mm)")
 ```
 
 ```{r}
