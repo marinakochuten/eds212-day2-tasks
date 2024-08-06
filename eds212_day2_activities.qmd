@@ -10,8 +10,8 @@ editor_options:
 # load packages
 library(tidyverse)
 library(palmerpenguins)
-
-
+data(package = 'palmerpenguins')
+penguins <- penguins
 ```
 
 ```{r}
@@ -36,6 +36,16 @@ a <- 1.2
 eval(dp_da)
 ```
 
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(data = penguins) + ggtitle("Penguin bill length versus bill depth across species") +labs(x = "Bill length (mm)", y = "Bill depth (mm)")
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, color = species)) +
+  geom_jitter() +
+  labs(title = "Penguin flipper length by species", x = "Species", y = "Flipper length (mm)")
+```
 
 
 
